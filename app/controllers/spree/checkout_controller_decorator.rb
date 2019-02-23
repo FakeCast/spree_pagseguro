@@ -1,6 +1,6 @@
 module Spree
   CheckoutController.class_eval do
-    before_filter :confirm_pagseguro, :only => [:update]
+    before_action :confirm_pagseguro, :only => [:update]
 
     private
     # This method hacks order update event to generate a payment transaction
